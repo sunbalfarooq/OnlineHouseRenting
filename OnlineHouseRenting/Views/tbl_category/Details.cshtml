@@ -1,0 +1,26 @@
+﻿@model OnlineHouseRenting.Models.tbl_category
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tbl_category</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HOUSE_CATEGORY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOUSE_CATEGORY)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.HOUSE_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

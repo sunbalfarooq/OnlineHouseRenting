@@ -1,0 +1,79 @@
+﻿@model OnlineHouseRenting.Models.tbl_house_detail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tbl_house_detail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tbl_category.HOUSE_CATEGORY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tbl_category.HOUSE_CATEGORY)
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.CITY)
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.RADIUS)
+        </dd> 
+        <dd>
+            @Html.DisplayFor(model => model.BATH_ROOMS)
+        </dd>
+        <dd>
+            @Html.DisplayFor(model => model.BED_ROOMS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HOUSE_ORDER)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.PRICE_RANGE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOUSE_ORDER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HOUSE_PIC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOUSE_PIC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HOUSE_DESCRIPTION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOUSE_DESCRIPTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HOUSE_STATUS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOUSE_STATUS)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

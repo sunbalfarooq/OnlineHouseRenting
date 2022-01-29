@@ -1,0 +1,88 @@
+﻿@model IEnumerable<OnlineHouseRenting.Models.tbl_house_detail>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tbl_category.HOUSE_CATEGORY)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.HOUSE_ORDER)
+        </th> 
+        <th>
+            @Html.DisplayNameFor(model => model.CITY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BATH_ROOMS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BED_ROOMS)
+        </th> 
+        <th>
+            @Html.DisplayNameFor(model => model.PRICE_RANGE)
+        </th> 
+        <th>
+            @Html.DisplayNameFor(model => model.RADIUS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HOUSE_PIC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HOUSE_DESCRIPTION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HOUSE_STATUS)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tbl_category.HOUSE_CATEGORY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HOUSE_ORDER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BATH_ROOMS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BED_ROOMS)
+        </td>
+       <td>
+            @Html.DisplayFor(modelItem => item.RADIUS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRICE_RANGE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CITY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HOUSE_PIC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HOUSE_DESCRIPTION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HOUSE_STATUS)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.HOUSE_DETAIL_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.HOUSE_DETAIL_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.HOUSE_DETAIL_ID })
+        </td>
+    </tr>
+}
+
+</table>
